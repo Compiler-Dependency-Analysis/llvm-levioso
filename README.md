@@ -32,14 +32,14 @@ Python | 3.8.10
 Ninja | 1.10.0
 CMake | 3.16.3
 
-The rest of requirements will be informed with LLVM build scripts.
+The rest of requirements will be informed by LLVM build scripts.
 
 ### Building Commands
 
 Here are the commands to build llvm-levioso, assuming to install LLVM in `$INSTALL_PATH`:
 
 ```
-clone https://github.com/Compiler-Dependency-Analysis/llvm-levioso.git
+git clone https://github.com/Compiler-Dependency-Analysis/llvm-levioso.git
 cd llvm-levioso
 mkdir _build && cd _build
 cmake -G Ninja -DCMAKE_INSTALL_PREFIX=$INSTALL_PATH -DLLVM_ENABLE_PROJECTS="clang" -DLLVM_TARGETS_TO_BUILD=X86 -DCMAKE_BUILD_TYPE=Debug -DLLVM_ENABLE_ASSERTIONS=On ../llvm/
